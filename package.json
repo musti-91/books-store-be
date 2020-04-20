@@ -6,7 +6,8 @@
     "main": "express.js",
     "scripts": {
         "server": "nodemon express.js --exec babel-node express --presets babel-preset-env --config nodemon.config.json",
-        "build": "nodemon express.js --exec babel-node express --presets babel-preset-env --config nodemon.config.json"
+        "build":"npm run prebuild && node dist/express.js",
+        "prebuild": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
     },
     "husky": {
         "hooks": {
@@ -55,7 +56,8 @@
         "babel-loader": "^8.1.0",
         "babel-preset-env": "^1.7.0",
         "husky": "^3.1.0",
-        "lint-staged": "^9.5.0"
+        "lint-staged": "^9.5.0",
+        "rimraf": "^3.0.2"
     },
     "repository": {
         "url": "https://github.com/musti-91/graphql-books",
