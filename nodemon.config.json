@@ -1,0 +1,11 @@
+{
+    "verbose": true,
+    "debug": true,
+    "ingore": ["node_modules", "**/*.test.js", "**/*.spec.js"],
+    "events": {
+        "restart": "echo \"Warning Remember run yarn test b4 push to dev branch!\""
+    },
+    "watch": ["./server"],
+    "ext": "js, gql",
+    "inspect": true
+}

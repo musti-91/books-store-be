@@ -1,0 +1,13 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended"],
+    "env": {
+        "jest": true
+    },
+    "plugins": ["node"],
+    "rules": {
+        "linebreak-style": ["error", "unix"],
+        "no-console": 1
+    },
+    "settings": {}
+}
